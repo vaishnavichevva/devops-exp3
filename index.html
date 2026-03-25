@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration</title>
+
+<style>
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI";
+  }
+
+  body{
+    background:#f2f5f9;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .container{
+    width:850px;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    display:flex;
+    box-shadow:0 0 40px rgba(0,0,0,0.13);
+    animation:fadeScale 1.3s ease;
+  }
+
+  @keyframes fadeScale{
+    0%{opacity:0; transform:scale(.92);}
+    100%{opacity:1; transform:scale(1);}
+  }
+
+  .left-box{
+    width:40%;
+    background:linear-gradient(120deg, #6be6c4, #3dbbff);
+    padding:35px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+
+  .left-box h1{
+    font-size:32px;
+    margin-bottom:12px;
+  }
+
+  .left-box p{
+    font-size:14px;
+    opacity:.95;
+    line-height:1.6;
+  }
+
+  .right-box{
+    width:60%;
+    padding:40px 45px;
+  }
+
+  .right-box h2{
+    font-size:26px;
+    color:#222;
+    margin-bottom:25px;
+  }
+
+  .input-row{
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .input-row label{
+    margin-bottom:6px;
+    font-size:14px;
+    color:#444;
+  }
+
+  .input-row input{
+    padding:11px;
+    border:1px solid #999;
+    border-radius:8px;
+    font-size:14px;
+    outline:none;
+    transition:.2s;
+  }
+
+  .input-row input:focus{
+    border-color:#3dbbff;
+  }
+
+  .gender-block{
+    margin-bottom:20px;
+  }
+
+  .gender-block span{
+    font-size:14px;
+    margin-bottom:7px;
+    display:block;
+    color:#444;
+  }
+
+  .radio-area{
+    display:flex;
+    gap:38px;
+    font-size:15px;
+    color:#222;
+  }
+
+  .submit-button{
+    width:100%;
+    padding:13px;
+    background:#3dbbff;
+    color:white;
+    border:none;
+    border-radius:9px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+  }
+
+  .submit-button:hover{
+    background:#1ea4e8;
+  }
+
+  @media(max-width:820px){
+    .container{flex-direction:column; width:92%;}
+    .left-box{width:100%; text-align:center;}
+    .right-box{width:100%;}
+  }
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <div class="left-box">
+    <h1>Welcome!</h1>
+    <p>Register today to get access to all student facilities and official documents. Enter correct details.</p>
+  </div>
+
+  <div class="right-box">
+
+      <h2>Registration Form</h2>
+
+      <form>
+
+        <div class="input-row">
+          <label>Name</label>
+          <input type="text" required>
+        </div>
+
+        <div class="input-row">
+          <label>Father Name</label>
+          <input type="text" required>
+        </div>
+
+        <div class="input-row">
+          <label>Mother Name</label>
+          <input type="text" required>
+        </div>
+
+        <div class="input-row">
+          <label>Hall Ticket No</label>
+          <input type="text" required>
+        </div>
+
+        <div class="gender-block">
+          <span>Gender</span>
+
+          <div class="radio-area">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+
+      </form>
+  </div>
+
+</div>
+
+</body>
+</html>
